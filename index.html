@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[CLINIC NAME] - Premium Dental Care</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome Icons (Real Professional Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -27,553 +25,165 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: var(--text-white);
-        }
-
+        body { font-family: 'Outfit', sans-serif; background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; color: var(--text-white); }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         ul { list-style: none; }
         img { max-width: 100%; display: block; object-fit: cover; }
         
         /* --- UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .section-padding { padding: 80px 0; }
         .text-center { text-align: center; }
-        
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            display: block;
-        }
+        .section-title { font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 600; margin-bottom: 10px; display: block; }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            transition: var(--transition);
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-            box-shadow: 0 4px 15px rgba(255, 88, 0, 0.3);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 88, 0, 0.4);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
+        .btn { display: inline-block; padding: 12px 30px; border-radius: 50px; font-weight: 600; cursor: pointer; border: none; transition: var(--transition); font-size: 1rem; }
+        .btn-primary { background-color: var(--primary); color: white; box-shadow: 0 4px 15px rgba(255, 88, 0, 0.3); }
+        .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 88, 0, 0.4); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: white; }
 
         /* --- PRELOADER --- */
-        #preloader {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg-dark);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease;
-        }
-        .loader-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            animation: pulse 1s infinite;
-        }
+        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-dark); z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s ease; }
+        .loader-icon { font-size: 3rem; color: var(--primary); animation: pulse 1s infinite; }
 
         /* --- HEADER --- */
-        header {
-            position: fixed;
-            top: 0; width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
-            display: flex; align-items: center; gap: 10px;
-        }
+        header { position: fixed; top: 0; width: 100%; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; font-family: 'Playfair Display', serif; display: flex; align-items: center; gap: 10px; }
         .logo i { color: var(--primary); }
-
         .nav-links { display: flex; gap: 30px; }
-
-        .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0; height: 2px;
-            bottom: -5px; left: 0;
-            background: var(--primary);
-            transition: 0.3s;
-        }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background: var(--primary); transition: 0.3s; }
         .nav-links a:hover::after { width: 100%; }
-
         .hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
 
         /* --- HERO --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            margin-top: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
+        .hero { height: 100vh; display: flex; align-items: center; position: relative; background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; margin-top: 0; }
+        .hero-content { position: relative; z-index: 1; max-width: 600px; }
+        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 30px; }
 
         /* --- STATS --- */
-        .stats-section {
-            background: var(--bg-card);
-            position: relative;
-            z-index: 2;
-            border-top: 2px solid var(--primary);
-            margin-top: -50px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 40px;
-        }
-
+        .stats-section { background: var(--bg-card); position: relative; z-index: 2; border-top: 2px solid var(--primary); margin-top: -50px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 40px; }
         .stat-item { text-align: center; }
         .stat-icon { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: white;
-            font-family: 'Playfair Display', serif;
-        }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: white; font-family: 'Playfair Display', serif; }
 
         /* --- ABOUT DOCTOR --- */
-        .doctor-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .doc-img-wrapper {
-            position: relative;
-        }
-        
-        .doc-img-wrapper img {
-            width: 100%;
-            border-radius: 20px;
-            border: 1px solid var(--primary);
-        }
-
-        .check-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-gray);
-        }
+        .doctor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .doc-img-wrapper { position: relative; }
+        .doc-img-wrapper img { width: 100%; border-radius: 20px; border: 1px solid var(--primary); }
+        .check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; color: var(--text-gray); }
         .check-list i { color: var(--primary); }
 
         /* --- OUR DOCTORS CAROUSEL --- */
-        .doc-carousel-container {
-            position: relative;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        .doc-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .doc-card {
-            min-width: 300px;
-            margin-right: 20px;
-            background: var(--bg-card);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: var(--transition);
-        }
-        
+        .doc-carousel-container { position: relative; overflow: hidden; padding: 20px 0; }
+        .doc-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .doc-card { min-width: 300px; margin-right: 20px; background: var(--bg-card); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: var(--transition); }
         .doc-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-
-        .doc-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
+        .doc-card img { width: 100%; height: 300px; object-fit: cover; }
         .doc-info { padding: 20px; text-align: center; }
         .doc-role { color: var(--primary); font-size: 0.9rem; font-weight: 600; }
 
         /* --- SERVICES --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .s-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition); text-align: center; }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .s-icon { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary); }
 
         /* --- BEFORE/AFTER --- */
-        .ba-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .ba-card {
-            position: relative;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #000;
-        }
-
-        .ba-img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-
-        .img-after {
-            width: 50%;
-            border-right: 3px solid var(--primary);
-            z-index: 2;
-            overflow: hidden;
-        }
-
-        .slider-range {
-            position: absolute;
-            top: 50%; left: 0;
-            width: 100%;
-            z-index: 10;
-            opacity: 0;
-            cursor: ew-resize;
-            height: 100%;
-        }
-
-        .ba-label {
-            position: absolute;
-            bottom: 10px;
-            padding: 4px 12px;
-            background: rgba(0,0,0,0.7);
-            font-size: 0.8rem;
-            border-radius: 4px;
-            font-weight: bold;
-        }
+        .ba-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .ba-card { position: relative; height: 300px; border-radius: 10px; overflow: hidden; background: #000; }
+        .ba-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .img-after { width: 50%; border-right: 3px solid var(--primary); z-index: 2; overflow: hidden; }
+        .slider-range { position: absolute; top: 50%; left: 0; width: 100%; z-index: 10; opacity: 0; cursor: ew-resize; height: 100%; }
+        .ba-label { position: absolute; bottom: 10px; padding: 4px 12px; background: rgba(0,0,0,0.7); font-size: 0.8rem; border-radius: 4px; font-weight: bold; }
         .lbl-before { right: 10px; }
         .lbl-after { left: 10px; z-index: 3; }
 
         /* --- BOOKING SECTION --- */
-        #booking {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .booking-container {
-            background: rgba(20, 20, 20, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--primary);
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
+        #booking { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-attachment: fixed; }
+        .booking-container { background: rgba(20, 20, 20, 0.95); padding: 40px; border-radius: 20px; border: 1px solid var(--primary); max-width: 900px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .full-width { grid-column: span 2; }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--text-gray);
-        }
-
-        .input-field, select, textarea {
-            width: 100%;
-            background: #000;
-            border: 1px solid #333;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: inherit;
-            outline: none;
-            transition: 0.3s;
-        }
-
+        .input-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-gray); }
+        .input-field, select, textarea { width: 100%; background: #000; border: 1px solid #333; color: white; padding: 15px; border-radius: 8px; font-family: inherit; outline: none; transition: 0.3s; }
         .input-field:focus { border-color: var(--primary); }
-
-        .availability-box {
-            background: rgba(255, 88, 0, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary);
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
+        .availability-box { background: rgba(255, 88, 0, 0.1); padding: 15px; border-radius: 8px; border-left: 3px solid var(--primary); margin-bottom: 20px; font-size: 0.9rem; }
 
         /* PICKER STYLES */
-        .picker-container {
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-            background: #000;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #333;
-            position: relative;
-        }
-
-        .picker-wheel {
-            height: 120px;
-            width: 100%;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-            position: relative;
-            text-align: center;
-        }
+        .picker-container { display: flex; gap: 5px; justify-content: center; background: #000; padding: 10px; border-radius: 10px; border: 1px solid #333; position: relative; }
+        .picker-wheel { height: 120px; width: 100%; overflow-y: scroll; scroll-snap-type: y mandatory; position: relative; text-align: center; }
         .picker-wheel::-webkit-scrollbar { display: none; }
+        .wheel-item { height: 40px; display: flex; align-items: center; justify-content: center; scroll-snap-align: center; color: #666; font-size: 0.9rem; }
+        .picker-overlay { position: absolute; top: 50px; left: 0; width: 100%; height: 40px; border-top: 1px solid var(--primary); border-bottom: 1px solid var(--primary); pointer-events: none; background: rgba(255,88,0,0.05); }
+        .wheel-item.selected { color: white; font-weight: bold; font-size: 1.1rem; }
 
-        .wheel-item {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            scroll-snap-align: center;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .picker-overlay {
-            position: absolute;
-            top: 50px; left: 0;
-            width: 100%; height: 40px;
-            border-top: 1px solid var(--primary);
-            border-bottom: 1px solid var(--primary);
-            pointer-events: none;
-            background: rgba(255,88,0,0.05);
-        }
-
-        .wheel-item.selected {
-            color: white;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        /* --- MAP --- */
-        .map-wrapper {
-            width: 100%;
-            height: 450px;
-            filter: grayscale(100%) invert(92%) contrast(83%); /* Dark Mode Map Effect */
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #050505;
-            padding: 60px 0 20px;
-            border-top: 1px solid #222;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+        /* --- MAP & FOOTER --- */
+        .map-wrapper { width: 100%; height: 450px; filter: grayscale(100%) invert(92%) contrast(83%); border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        footer { background: #050505; padding: 60px 0 20px; border-top: 1px solid #222; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
         .social-icons { display: flex; gap: 15px; margin-top: 20px; }
-        .s-icon-box {
-            width: 40px; height: 40px;
-            background: #222;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
+        .s-icon-box { width: 40px; height: 40px; background: #222; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.2rem; transition: 0.3s; }
         .s-icon-box:hover { background: var(--primary); color: white; }
 
-        /* --- FLOATING ELEMENTS --- */
-        .float-wa {
-            position: fixed;
-            bottom: 30px; right: 30px;
-            width: 60px; height: 60px;
-            background: var(--whatsapp);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            z-index: 900;
-            font-size: 2rem;
-            color: white;
-            animation: pulse 2s infinite;
-        }
+        /* --- FLOATING ELEMENTS & CHATBOT --- */
+        .float-wa { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 900; font-size: 2rem; color: white; animation: pulse 2s infinite; }
         
-        .scroll-top {
-            position: fixed;
-            bottom: 30px; left: 30px;
-            width: 50px; height: 50px;
-            background: var(--bg-card);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            z-index: 900;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-        }
+        /* CHATBOT STYLES */
+        .chat-btn { position: fixed; bottom: 100px; right: 30px; width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 900; font-size: 1.8rem; color: white; cursor: pointer; border: none; transition: var(--transition); }
+        .chat-btn:hover { transform: scale(1.1); }
+        
+        .chat-window { position: fixed; bottom: 100px; right: 100px; width: 350px; height: 500px; background: var(--bg-card); border: 1px solid #333; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); z-index: 1000; display: none; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; }
+        .chat-window.active { display: flex; opacity: 1; transform: translateY(0); }
+        
+        .chat-header { background: #000; padding: 15px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
+        .chat-header h3 { font-size: 1rem; margin: 0; display: flex; align-items: center; gap: 8px; }
+        .close-chat { background: none; border: none; color: #666; font-size: 1.2rem; cursor: pointer; }
+        .close-chat:hover { color: white; }
+
+        .chat-messages { flex-grow: 1; padding: 15px; overflow-y: auto; background: var(--bg-dark); display: flex; flex-direction: column; gap: 10px; }
+        .message { padding: 10px 15px; border-radius: 15px; font-size: 0.9rem; max-width: 80%; line-height: 1.4; }
+        .msg-user { background: var(--primary); color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .msg-bot { background: #222; color: #ddd; align-self: flex-start; border-bottom-left-radius: 2px; border: 1px solid #333; }
+        .typing { font-style: italic; color: #666; font-size: 0.8rem; margin-left: 10px; display: none; }
+
+        .chat-input-area { padding: 15px; background: #000; border-top: 1px solid #333; display: flex; gap: 10px; }
+        .chat-input { flex-grow: 1; background: #111; border: 1px solid #333; padding: 10px; border-radius: 20px; color: white; outline: none; }
+        .chat-send { background: var(--primary); border: none; width: 40px; height: 40px; border-radius: 50%; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+
+        .scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--bg-card); border: 1px solid var(--primary); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 900; opacity: 0; pointer-events: none; transition: 0.3s; }
         .scroll-top.visible { opacity: 1; pointer-events: all; }
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero-content { text-align: center; }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px; left: 0; width: 100%;
-                background: var(--bg-dark);
-                flex-direction: column;
-                padding: 20px;
-                text-align: center;
-            }
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: var(--bg-dark); flex-direction: column; padding: 20px; text-align: center; }
             .nav-links.active { display: flex; }
             .hamburger { display: block; }
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .doctor-grid { grid-template-columns: 1fr; text-align: center; }
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
+            .chat-window { right: 20px; bottom: 90px; width: calc(100% - 40px); height: 60vh; }
         }
         
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
         .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-
     </style>
 </head>
 <body>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <i class="fas fa-tooth loader-icon"></i>
-    </div>
+    <div id="preloader"><i class="fas fa-tooth loader-icon"></i></div>
 
-    <!-- Header -->
     <header>
         <div class="container nav-container">
             <a href="#" class="logo"><i class="fas fa-tooth"></i> [CLINIC <span>NAME</span>]</a>
@@ -592,7 +202,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content fade-in-up">
@@ -607,7 +216,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
@@ -635,7 +243,6 @@
         </div>
     </section>
 
-    <!-- About Doctor -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="doctor-grid">
@@ -659,58 +266,23 @@
         </div>
     </section>
 
-    <!-- OUR DOCTORS CAROUSEL -->
     <section id="doctors" class="section-padding" style="background: var(--bg-light);">
         <div class="container">
             <div class="text-center fade-in-up">
                 <span class="section-subtitle">The Team</span>
                 <h2 class="section-title">Our Specialists</h2>
             </div>
-            
             <div class="doc-carousel-container fade-in-up">
                 <div class="doc-track" id="doctorTrack">
-                    <!-- Doctor 1 -->
-                    <div class="doc-card">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah">
-                        <div class="doc-info">
-                            <h3>Dr. Sarah Jenkins</h3>
-                            <div class="doc-role">Pediatric Dentist</div>
-                            <p style="color:#666; font-size:0.9rem; margin-top:5px;">8 Years Experience</p>
-                        </div>
-                    </div>
-                    <!-- Doctor 2 -->
-                    <div class="doc-card">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr. Michael">
-                        <div class="doc-info">
-                            <h3>Dr. Michael Chen</h3>
-                            <div class="doc-role">Orthodontist</div>
-                            <p style="color:#666; font-size:0.9rem; margin-top:5px;">12 Years Experience</p>
-                        </div>
-                    </div>
-                    <!-- Doctor 3 -->
-                    <div class="doc-card">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80" alt="Dr. Emily">
-                        <div class="doc-info">
-                            <h3>Dr. Emily Rose</h3>
-                            <div class="doc-role">Cosmetic Surgeon</div>
-                            <p style="color:#666; font-size:0.9rem; margin-top:5px;">10 Years Experience</p>
-                        </div>
-                    </div>
-                    <!-- Doctor 4 -->
-                    <div class="doc-card">
-                        <img src="https://images.unsplash.com/photo-1537368910025-bc005fbede68?auto=format&fit=crop&w=600&q=80" alt="Dr. David">
-                        <div class="doc-info">
-                            <h3>Dr. David Lee</h3>
-                            <div class="doc-role">Endodontist</div>
-                            <p style="color:#666; font-size:0.9rem; margin-top:5px;">15 Years Experience</p>
-                        </div>
-                    </div>
+                    <div class="doc-card"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah"><div class="doc-info"><h3>Dr. Sarah Jenkins</h3><div class="doc-role">Pediatric Dentist</div><p style="color:#666; font-size:0.9rem; margin-top:5px;">8 Years Experience</p></div></div>
+                    <div class="doc-card"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr. Michael"><div class="doc-info"><h3>Dr. Michael Chen</h3><div class="doc-role">Orthodontist</div><p style="color:#666; font-size:0.9rem; margin-top:5px;">12 Years Experience</p></div></div>
+                    <div class="doc-card"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80" alt="Dr. Emily"><div class="doc-info"><h3>Dr. Emily Rose</h3><div class="doc-role">Cosmetic Surgeon</div><p style="color:#666; font-size:0.9rem; margin-top:5px;">10 Years Experience</p></div></div>
+                    <div class="doc-card"><img src="https://images.unsplash.com/photo-1537368910025-bc005fbede68?auto=format&fit=crop&w=600&q=80" alt="Dr. David"><div class="doc-info"><h3>Dr. David Lee</h3><div class="doc-role">Endodontist</div><p style="color:#666; font-size:0.9rem; margin-top:5px;">15 Years Experience</p></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="section-padding">
         <div class="container">
             <div class="text-center fade-in-up">
@@ -718,41 +290,16 @@
                 <h2 class="section-title">World-Class Services</h2>
             </div>
             <div class="services-grid" style="margin-top:40px;">
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-tooth"></i></div>
-                    <h3>General Dentistry</h3>
-                    <p style="color:var(--text-gray);">Routine checkups, cleanings, and cavity prevention.</p>
-                </div>
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-magic"></i></div>
-                    <h3>Teeth Whitening</h3>
-                    <p style="color:var(--text-gray);">Advanced laser whitening for instant brightness.</p>
-                </div>
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-screw"></i></div>
-                    <h3>Dental Implants</h3>
-                    <p style="color:var(--text-gray);">Permanent, natural-looking tooth replacements.</p>
-                </div>
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>Root Canal</h3>
-                    <p style="color:var(--text-gray);">Save your natural teeth with painless therapy.</p>
-                </div>
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-teeth"></i></div>
-                    <h3>Orthodontics</h3>
-                    <p style="color:var(--text-gray);">Invisalign and braces for a perfectly aligned smile.</p>
-                </div>
-                <div class="service-card fade-in-up">
-                    <div class="s-icon"><i class="fas fa-child"></i></div>
-                    <h3>Pediatric Care</h3>
-                    <p style="color:var(--text-gray);">Gentle and fun dental care for children.</p>
-                </div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-tooth"></i></div><h3>General Dentistry</h3><p style="color:var(--text-gray);">Routine checkups, cleanings, and cavity prevention.</p></div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-magic"></i></div><h3>Teeth Whitening</h3><p style="color:var(--text-gray);">Advanced laser whitening for instant brightness.</p></div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-screw"></i></div><h3>Dental Implants</h3><p style="color:var(--text-gray);">Permanent, natural-looking tooth replacements.</p></div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-heartbeat"></i></div><h3>Root Canal</h3><p style="color:var(--text-gray);">Save your natural teeth with painless therapy.</p></div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-teeth"></i></div><h3>Orthodontics</h3><p style="color:var(--text-gray);">Invisalign and braces for a perfectly aligned smile.</p></div>
+                <div class="service-card fade-in-up"><div class="s-icon"><i class="fas fa-child"></i></div><h3>Pediatric Care</h3><p style="color:var(--text-gray);">Gentle and fun dental care for children.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Real Before/After Gallery -->
     <section id="gallery" class="section-padding" style="background: var(--bg-light);">
         <div class="container">
             <div class="text-center fade-in-up">
@@ -760,8 +307,6 @@
                 <h2 class="section-title">Real Patient Results</h2>
             </div>
             <div class="ba-grid" style="margin-top: 40px;">
-                
-                <!-- Case 1 -->
                 <div class="ba-card fade-in-up">
                     <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=600&q=80" class="ba-img img-before" alt="Before">
                     <div class="ba-img img-after" id="ba1-after">
@@ -771,8 +316,6 @@
                     <span class="ba-label lbl-before">Before</span>
                     <input type="range" min="0" max="100" value="50" class="slider-range" oninput="updateSlider(this, 'ba1-after')">
                 </div>
-
-                <!-- Case 2 -->
                 <div class="ba-card fade-in-up">
                     <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" class="ba-img img-before" alt="Before">
                     <div class="ba-img img-after" id="ba2-after">
@@ -786,7 +329,6 @@
         </div>
     </section>
 
-    <!-- ORGANIZED APPOINTMENT SECTION -->
     <section id="booking" class="section-padding">
         <div class="container">
             <div class="booking-container fade-in-up">
@@ -794,68 +336,19 @@
                     <h2 class="section-title">Book an Appointment</h2>
                     <p style="color: #ccc;">Fill the details below to schedule your visit.</p>
                 </div>
-
-                <!-- Availability Info -->
-                <div class="availability-box">
-                    <strong><i class="fas fa-clock"></i> Clinic Timings:</strong><br>
-                    Mon - Sat: 9:00 AM - 7:00 PM <br>
-                    Sunday: 10:00 AM - 2:00 PM
-                </div>
-
+                <div class="availability-box"><strong><i class="fas fa-clock"></i> Clinic Timings:</strong><br>Mon - Sat: 9:00 AM - 7:00 PM <br>Sunday: 10:00 AM - 2:00 PM</div>
                 <form id="bookingForm" onsubmit="event.preventDefault(); submitToWhatsapp();">
                     <div class="form-grid">
-                        <div class="input-group">
-                            <label><i class="fas fa-user"></i> Full Name</label>
-                            <input type="text" id="name" class="input-field" placeholder="John Doe" required>
+                        <div class="input-group"><label><i class="fas fa-user"></i> Full Name</label><input type="text" id="name" class="input-field" placeholder="John Doe" required></div>
+                        <div class="input-group"><label><i class="fas fa-phone"></i> Phone Number</label><input type="tel" id="phone" class="input-field" placeholder="+91 98765 43210" required></div>
+                        <div class="input-group full-width"><label><i class="fas fa-stethoscope"></i> Service Needed</label>
+                            <select id="service" class="input-field"><option>General Checkup</option><option>Teeth Cleaning</option><option>Root Canal Treatment</option><option>Teeth Whitening</option><option>Braces / Invisalign</option><option>Dental Implants</option><option>Emergency Pain Relief</option></select>
                         </div>
-                        <div class="input-group">
-                            <label><i class="fas fa-phone"></i> Phone Number</label>
-                            <input type="tel" id="phone" class="input-field" placeholder="+91 98765 43210" required>
-                        </div>
-                        
-                        <div class="input-group full-width">
-                            <label><i class="fas fa-stethoscope"></i> Service Needed</label>
-                            <select id="service" class="input-field">
-                                <option>General Checkup</option>
-                                <option>Teeth Cleaning</option>
-                                <option>Root Canal Treatment</option>
-                                <option>Teeth Whitening</option>
-                                <option>Braces / Invisalign</option>
-                                <option>Dental Implants</option>
-                                <option>Emergency Pain Relief</option>
-                            </select>
-                        </div>
-
-                        <!-- REASON FOR APPOINTMENT -->
-                        <div class="input-group full-width">
-                            <label><i class="fas fa-comment-medical"></i> Reason for Appointment / Symptoms</label>
-                            <textarea id="reason" class="input-field" rows="3" placeholder="Describe your pain or requirement (e.g., 'Toothache in upper right side since 2 days')"></textarea>
-                        </div>
-
-                        <!-- CUSTOM WHEEL PICKERS -->
-                        <div class="input-group">
-                            <label><i class="fas fa-calendar-alt"></i> Select Date</label>
-                            <div class="picker-container">
-                                <div class="picker-overlay"></div>
-                                <div class="picker-wheel" id="wheel-day"></div>
-                                <div class="picker-wheel" id="wheel-month"></div>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <label><i class="fas fa-clock"></i> Select Time</label>
-                            <div class="picker-container">
-                                <div class="picker-overlay"></div>
-                                <div class="picker-wheel" id="wheel-hour"></div>
-                                <div class="picker-wheel" id="wheel-min"></div>
-                                <div class="picker-wheel" id="wheel-ampm"></div>
-                            </div>
-                        </div>
-
+                        <div class="input-group full-width"><label><i class="fas fa-comment-medical"></i> Reason for Appointment</label><textarea id="reason" class="input-field" rows="3" placeholder="Describe your pain or requirement"></textarea></div>
+                        <div class="input-group"><label><i class="fas fa-calendar-alt"></i> Select Date</label><div class="picker-container"><div class="picker-overlay"></div><div class="picker-wheel" id="wheel-day"></div><div class="picker-wheel" id="wheel-month"></div></div></div>
+                        <div class="input-group"><label><i class="fas fa-clock"></i> Select Time</label><div class="picker-container"><div class="picker-overlay"></div><div class="picker-wheel" id="wheel-hour"></div><div class="picker-wheel" id="wheel-min"></div><div class="picker-wheel" id="wheel-ampm"></div></div></div>
                         <div class="input-group full-width" style="margin-top: 20px;">
-                            <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px;">
-                                <i class="fab fa-whatsapp"></i> Confirm & Send via WhatsApp
-                            </button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px;"><i class="fab fa-whatsapp"></i> Confirm & Send via WhatsApp</button>
                         </div>
                     </div>
                 </form>
@@ -863,104 +356,117 @@
         </div>
     </section>
 
-    <!-- Google Map Section -->
-    <div class="map-wrapper">
-        <!-- Generic Central Location - Replace src with your specific location embed code -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1510579767645" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+    <div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1510579767645" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3><i class="fas fa-tooth" style="color:var(--primary)"></i> [CLINIC NAME]</h3>
-                    <p style="color:#666; margin-top:10px;">
-                        Providing top-quality dental care with a commitment to excellence. Your smile is our passion.
-                    </p>
-                    <div class="social-icons">
-                        <a href="#" class="s-icon-box"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="s-icon-box"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="s-icon-box"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="s-icon-box"><i class="fab fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links" style="color:#666; margin-top:10px; line-height: 2;">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#doctors">Our Team</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#booking">Book Appointment</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Contact Us</h3>
-                    <ul style="color:#666; margin-top:10px; line-height: 2;">
-                        <li><i class="fas fa-map-marker-alt" style="color:var(--primary); width:20px;"></i> [CLINIC ADDRESS]</li>
-                        <li><i class="fas fa-phone" style="color:var(--primary); width:20px;"></i> [PHONE NUMBER]</li>
-                        <li><i class="fas fa-envelope" style="color:var(--primary); width:20px;"></i> [EMAIL]</li>
-                    </ul>
-                </div>
+                <div><h3><i class="fas fa-tooth" style="color:var(--primary)"></i> [CLINIC NAME]</h3><p style="color:#666; margin-top:10px;">Providing top-quality dental care with a commitment to excellence.</p><div class="social-icons"><a href="#" class="s-icon-box"><i class="fab fa-instagram"></i></a><a href="#" class="s-icon-box"><i class="fab fa-facebook-f"></i></a><a href="#" class="s-icon-box"><i class="fab fa-youtube"></i></a><a href="#" class="s-icon-box"><i class="fab fa-x-twitter"></i></a></div></div>
+                <div><h3>Quick Links</h3><ul class="footer-links" style="color:#666; margin-top:10px; line-height: 2;"><li><a href="#home">Home</a></li><li><a href="#doctors">Our Team</a></li><li><a href="#services">Services</a></li><li><a href="#booking">Book Appointment</a></li></ul></div>
+                <div><h3>Contact Us</h3><ul style="color:#666; margin-top:10px; line-height: 2;"><li><i class="fas fa-map-marker-alt" style="color:var(--primary); width:20px;"></i> [CLINIC ADDRESS]</li><li><i class="fas fa-phone" style="color:var(--primary); width:20px;"></i> [PHONE NUMBER]</li><li><i class="fas fa-envelope" style="color:var(--primary); width:20px;"></i> [EMAIL]</li></ul></div>
             </div>
-            <div class="text-center" style="border-top:1px solid #222; padding-top:20px; color:#444;">
-                <p>&copy; 2024 [CLINIC NAME]. All Rights Reserved.</p>
-            </div>
+            <div class="text-center" style="border-top:1px solid #222; padding-top:20px; color:#444;"><p>© 2024 [CLINIC NAME]. All Rights Reserved.</p></div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/1234567890" class="float-wa" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <button class="chat-btn" onclick="toggleChat()" title="AI Assistant"><i class="fas fa-robot"></i></button>
+    
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3><i class="fas fa-tooth" style="color:var(--primary)"></i> Dental Assistant</h3>
+            <button class="close-chat" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message msg-bot">Hello! I am your dental assistant. How can I help you today?</div>
+        </div>
+        <div class="typing" id="typingIndicator">Assistant is typing...</div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Ask about prices, pain..." onkeypress="handleEnter(event)">
+            <button class="chat-send" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/1234567890" class="float-wa" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
     <a href="#home" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- Scripts -->
     <script>
-        // --- PRELOADER ---
+        // --- CHATBOT LOGIC ---
+        const chatWindow = document.getElementById('chatWindow');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        function toggleChat() {
+            chatWindow.classList.toggle('active');
+            if (chatWindow.classList.contains('active')) chatInput.focus();
+        }
+
+        function handleEnter(e) { if (e.key === 'Enter') sendChat(); }
+
+        async function sendChat() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            // Add User Message
+            chatMessages.innerHTML += `<div class="message msg-user">${text}</div>`;
+            chatInput.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Show Typing
+            typingIndicator.style.display = 'block';
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                
+                const data = await response.json();
+                typingIndicator.style.display = 'none';
+
+                if (data.reply) {
+                    chatMessages.innerHTML += `<div class="message msg-bot">${data.reply}</div>`;
+                } else {
+                    chatMessages.innerHTML += `<div class="message msg-bot" style="color:red">Error connecting to AI.</div>`;
+                }
+            } catch (error) {
+                console.error(error);
+                typingIndicator.style.display = 'none';
+                chatMessages.innerHTML += `<div class="message msg-bot" style="color:red">Server error.</div>`;
+            }
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // --- PRELOADER & EXISTING LOGIC ---
         window.onload = function() {
             document.getElementById('preloader').style.opacity = '0';
-            setTimeout(() => {
-                document.getElementById('preloader').style.display = 'none';
-            }, 500);
+            setTimeout(() => { document.getElementById('preloader').style.display = 'none'; }, 500);
             initPickers();
         }
 
-        // --- NAVIGATION ---
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+        document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
 
-        // --- SCROLL TO TOP ---
         const scrollTopBtn = document.getElementById('scrollTop');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
+            if (window.scrollY > 300) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
         });
 
-        // --- DOCTORS CAROUSEL AUTO-SLIDE ---
+        // --- DOCTORS CAROUSEL ---
         const track = document.getElementById('doctorTrack');
         let scrollAmount = 0;
-        let slideDirection = 1; // 1 for right, -1 for left
+        let slideDirection = 1; 
 
         function autoScrollDoctors() {
-            const cardWidth = 320; // card width + margin
+            const cardWidth = 320; 
             const maxScroll = track.scrollWidth - track.clientWidth;
-            
             if (scrollAmount >= maxScroll) slideDirection = -1;
             if (scrollAmount <= 0) slideDirection = 1;
-
             scrollAmount += (cardWidth * slideDirection);
             track.style.transform = `translateX(-${Math.max(0, Math.min(scrollAmount, maxScroll))}px)`;
         }
@@ -978,7 +484,6 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in-up, .stat-number').forEach(el => observer.observe(el));
 
         function animateValue(obj, start, end, duration) {
@@ -987,20 +492,16 @@
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                 obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
+                if (progress < 1) window.requestAnimationFrame(step);
             };
             window.requestAnimationFrame(step);
         }
 
-        // --- BEFORE/AFTER SLIDER ---
         function updateSlider(range, imgId) {
-            const img = document.getElementById(imgId);
-            img.style.width = range.value + "%";
+            document.getElementById(imgId).style.width = range.value + "%";
         }
 
-        // --- CUSTOM DATE/TIME PICKER LOGIC ---
+        // --- PICKERS ---
         function initPickers() {
             const days = document.getElementById('wheel-day');
             const months = document.getElementById('wheel-month');
@@ -1041,13 +542,11 @@
                 }
             });
         }
-
         function getSelectedValue(containerId) {
             const container = document.getElementById(containerId);
             const selected = container.querySelector('.wheel-item.selected');
             return selected ? selected.innerText : "";
         }
-
         function debounce(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -1057,7 +556,6 @@
             };
         }
 
-        // --- WHATSAPP SUBMISSION ---
         function submitToWhatsapp() {
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
@@ -1070,27 +568,11 @@
             const min = getSelectedValue('wheel-min');
             const ap = getSelectedValue('wheel-ampm');
             
-            if(!name || !phone) {
-                alert("Please fill in your Name and Phone Number.");
-                return;
-            }
+            if(!name || !phone) { alert("Please fill in your Name and Phone Number."); return; }
 
-            const message = `
-🦷 *APPOINTMENT REQUEST - [CLINIC NAME]*
-
-👤 *Name:* ${name}
-📞 *Phone:* ${phone}
-🏥 *Service:* ${service}
-📝 *Reason:* ${reason}
-📅 *Date:* ${day} ${month}
-🕐 *Time:* ${hour}:${min} ${ap}
-
-Please confirm availability. Thank you!`;
-
+            const message = `🦷 *APPOINTMENT REQUEST - [CLINIC NAME]*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n🏥 *Service:* ${service}\n📝 *Reason:* ${reason}\n📅 *Date:* ${day} ${month}\n🕐 *Time:* ${hour}:${min} ${ap}\n\nPlease confirm availability. Thank you!`;
             const encodedMsg = encodeURIComponent(message);
-            // Replace with your real Whatsapp Number (with country code, no +)
-            const whatsappUrl = `https://wa.me/919876543210?text=${encodedMsg}`;
-            window.open(whatsappUrl, '_blank');
+            window.open(`https://wa.me/919876543210?text=${encodedMsg}`, '_blank');
         }
     </script>
 </body>
